@@ -1,6 +1,6 @@
 
 /*      Shell        */
-/*      This will only work with gcc/wsl or linux/macos machines    */
+/*      This will only work with WSL/gcc or UNIX machines    */
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -107,7 +107,7 @@ int lsh_launch(char **args) {
         /* Child process */
         if (execvp(args[0], args) == -1) {
             
-            /* args[0] is the command 
+            /* args[0] will be the command
                args are the options
 
                char* args[] = {"ls", "-l", NULL}; 
